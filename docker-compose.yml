@@ -15,7 +15,7 @@ services:
     environment:
       - TZ=Asia/Ho_Chi_Minh
     networks:
-      - longlearnnetwork
+      - nemonetwork
     ports:
       - 6200:80
     restart: always
