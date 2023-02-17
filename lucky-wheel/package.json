@@ -1,0 +1,15 @@
+
+{
+  "name": "lucky-wheel",
+  "version": "1.0.0",
+  "description": "lucky-wheel friso",
+  "author": "fractal",
+  "license": "ISC",
+  "scripts": {
+    "start": "gulp start"
+  },
+  "devDependencies": {
+    "browser-sync": "2.27.10",
+    "gulp": "4.0.2"
+  }
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:image" content="https://ftuat.s3.ap-southeast-1.amazonaws.com/dev/2023/2/13/thumbnail.jpg" />
+  <title>Form điền thông tin</title>
+
+  <link rel="icon" href="./assets/image/favicon.ico" type="image/ico">
+  <link rel="shortcut icon" href="./assets/image/favicon.ico">
+  <link rel="apple-touch-icon" href="./assets/image/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" href="./assets/image/favicon.ico">
+
+  <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./assets/css/index.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="./assets/css/spin.css">
+  <style>
+    .rule {
+      color: #fff;
+      text-decoration: none;
+      display: inline-block;
+      border-bottom: 1px solid #fff;
+      padding-bottom: 1px;
+    }
+
+    .rule:hover {
+      color: #fff;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="spin loading"></div>
+  <div class="container-fluid container-mobile">
+    <div class="golden-space">
+      <img src="./assets/image/banner-form.png" alt="">
+    </div>
+    <div class="row">
+      <div class="col-12 general blue-bkgr">
+        <div class="text my-3">
+          Vui lòng điền thông tin để tham gia
+          <br>
+          Vòng quay may mắn
+        </div>
+        <div class="info-frm row m-0 form-group">
+          <div class="col-12 px-0 mx-0 d-flex align-items-center" style="justify-content: space-evenly;">
+            <img class="img-avatar ml-2" src="./assets/image/user-default.jpg" alt="">
+            <div class="user-name w-100 ml-4 mr-2">
+              <label for="username">Tên hiển thị</label>
+              <input type="text" name="username" id="username" disabled value="Text">
+            </div>
+          </div>
+
+          <div class="col-12 user-phone">
+            <label for="phone">Số điện thoại</label>
+            <input type="number" name="phone" id="phone" value="" min="0">
+            <span class="message-error message-phone"></span>
+          </div>
+          <div class="col-12 sub-info">
+            <div class="text">
+              Thông tin bên dưới sẽ giúp chúng tôi hiểu Bạn hơn và gửi đến Bạn những thông tin, món quà phù hợp nhất.
+            </div>
+            <div class="col-12 radio-gr">
+              <div>
+                <input type="radio" id="haveChildren1" name="haveChildren" value="0" checked>
+                <label for="haveChildren1">Đang mang thai</label>
+              </div>
+              <div class="ml-4">
+                <input type="radio" id="haveChildren2" name="haveChildren" value="1">
+                <label for="haveChildren2">Có con</label>
+              </div>
+            </div>
+            <label class="date-of-birth" for="date-of-birth">Chọn ngày sinh của bé</label>
+            <input type="date" name="date-of-birth" id="date-of-birth" class="form-control">
+            <span class="message-error message-date"></span>
+          </div>
+          <div class="col-12 other">
+            <label for="other">Khác</label>
+            <input type="text" name="other" id="other" value="">
+          </div>
+          <div class="col-12 policy">
+            <label for="policy">&nbsp;</label>
+            <p>Tôi đã đọc & đồng ý <a class="rule" href="./rule.html">Thể lệ</a> chương trình Friso Mum Club.</p>
+          </div>
+          <button type="button" class="btn btn-primary golden-btn btn-submit">
+            Xác nhận
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./environment.js"></script>
+  <script src="./assets/js/loading.js"></script>
+  <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/form.js"></script>
+
+</body>
+
+</html>

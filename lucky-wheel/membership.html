@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml"
+  xmlns:o="urn:schemas-microsoft-com:office:office">
+
+<head>
+  <meta charset="utf-8"> <!-- utf-8 works for most cases -->
+  <meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
+  <meta name="x-apple-disable-message-reformatting"> <!-- Disable auto-scale in iOS 10 Mail entirely -->
+  <title></title> <!-- The title tag shows in email notifications, like Android 4.4. -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="./assets/css/spin.css">
+  <style>
+    @font-face {
+      font-family: SFProDisplay-Regular;
+      src: url('./assets/assets/fonts/FSAlbertPro1.otf');
+    }
+
+    body {
+      font-family: SFProDisplay-Regular;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.5;
+      margin: 0;
+      background-color: #fff;
+    }
+
+    iframe {
+      display: block;
+      border: none;
+      height: 100vh;
+      max-height: calc(100vh - 68px);
+      width: 100vw;
+      overflow: hidden;
+    }
+
+    .top-bar {
+      background: #00459B;
+      position: relative;
+      padding: 20px 24px;
+      text-align: center;
+      border-bottom: 4px solid #C2AC72;
+
+    }
+
+    .top-bar a {
+      display: flex;
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .top-bar h4.title {
+      color: #fff;
+      margin: 0;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="spin loading"></div>
+  <section>
+    <div class="top-bar">
+      <a href="javascript:history.back()">
+        <img src="./assets/image/chevron-left.svg" alt="">
+      </a>
+      <h4 class="title">Quyền lợi thành viên</h4>
+    </div>
+    <iframe sandbox="allow-scripts" src="https://www.friso.com.vn/campaign/friso-mum-club"></iframe>
+  </section>
+  <script src="./assets/js/loading.js"></script>
+  <script  type="text/javascript">
+    hideLoading();
+  </script>
+</body>
+
+</html>

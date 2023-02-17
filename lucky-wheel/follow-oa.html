@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml"
+    xmlns:o="urn:schemas-microsoft-com:office:office">
+
+<head>
+    <meta charset="utf-8" />
+    <!-- utf-8 works for most cases -->
+    <meta name="viewport" content="width=device-width" />
+    <!-- Forcing initial-scale shouldn't be necessary -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Use the latest (edge) version of IE rendering engine -->
+    <meta name="x-apple-disable-message-reformatting" />
+    <meta property="og:image" content="https://ftuat.s3.ap-southeast-1.amazonaws.com/dev/2023/2/13/thumbnail.jpg" />
+    <!-- Disable auto-scale in iOS 10 Mail entirely -->
+    <title>follow OA</title>
+    
+    <link rel="icon" href="./assets/image/favicon.ico" type="image/ico">
+    <link rel="shortcut icon" href="./assets/image/favicon.ico">
+    <link rel="apple-touch-icon" href="./assets/image/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="./assets/image/favicon.ico">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="./assets/css/spin.css">
+    <!-- The title tag shows in email notifications, like Android 4.4. -->
+    <style>
+        @font-face {
+            font-family: SFProDisplay-Regular;
+            src: url('./assets/fonts/FSAlbertPro1.otf');
+        }
+
+        @font-face {
+            font-family: SFProDisplay-Medium;
+            src: url('./assets/fonts/FSAlbertPro-Bold1.otf');
+        }
+
+        body {
+            font-family: SFProDisplay-Regular;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.5;
+            margin: 0;
+            padding: 0 24px 16px;
+            color: #666666;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        * {
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+
+        .logo {
+            margin-bottom: 24px;
+        }
+
+        .logo-zalo {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            border: 2px solid #eaeaea;
+            margin-top: 50px;
+            margin-bottom: 5px;
+        }
+
+        h5 {
+            font-family: SFProDisplay-Medium;
+            font-size: 20px;
+            font-weight: 600;
+            color: #333333;
+            margin-top: 24px;
+            margin-bottom: 16px;
+        }
+
+        p {
+            font-family: SFProDisplay-Regular;
+            font-size: 15px;
+            color: #666666;
+            line-height: 24px;
+            margin-top: 0;
+            margin-bottom: 35px;
+        }
+
+        h6 {
+            font-family: SFProDisplay-Medium;
+            font-size: 14px;
+            font-weight: 600;
+            color: #000000;
+            line-height: 22px;
+            margin-top: 0;
+            margin-bottom: 16px;
+        }
+
+        .zalo-follow-only-button {
+            width: 100px;
+        }
+
+        .hand-click {
+            margin-top: -25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="spin loading"></div>
+    <section class="text-center">
+        <img src="./assets/image/logo-friso.svg" alt="" class="logo">
+        <img src="./assets/image/PinClipart.png" alt="">
+        <h5>Chúc Mừng</h5>
+        <p>Chúc mừng Bạn đã trở thành thành viên Friso Mum Club. Cảm ơn Bạn đã tin dùng sản phẩm Friso.
+            Friso sẽ luôn đồng
+            hành cùng Bạn trong quá trình chăm sóc bé yêu. Hãy bấm quan tâm trang chính thức Zalo Friso
+            để cùng tham gia các
+            chương trình dành cho thành viên nhé.</p>
+        <h6>Nhấn “Quan tâm Friso”</h6>
+        <div class="text-center">
+            <div class="zalo-follow-only-button" data-oaid="" data-callback="followed"></div>
+            <img src="./assets/image/tabler-hand-click.svg" alt="" class="hand-click">
+        </div>
+
+    </section>
+
+    <script src="./environment.js"></script>
+    <script src="./assets/js/loading.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        hideLoading();
+        $(".zalo-follow-only-button").attr("data-oaid", OA_ID);
+        function followed() {
+            console.log("follow successfully!");
+            window.open(
+                './wheel.html',
+                "_self"
+            );
+        }
+
+    </script>
+    <script src="https://sp.zalo.me/plugins/sdk.js"></script>
+</body>
+
+</html>
